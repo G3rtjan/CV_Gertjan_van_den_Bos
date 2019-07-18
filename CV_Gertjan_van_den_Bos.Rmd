@@ -1,0 +1,107 @@
+---
+name: "Gertjan"
+surname: "van den Bos"
+position: "Data Scientist"
+address: "Utrecht area - The Netherlands"
+phone: "+31 6 27576101"
+email: "gertjanvdbos@gmail.com"
+github: "G3rtjan"
+linkedin: "gertjanvdbos"
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "0395DE"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Skills
+
+## Data Science
+
+* Time Series, Forecasting, Anomaly Detection, Classification, Machine Learning, Data Wrangling, Data Visualization, Dashboarding, Process Automation
+
+## Languages
+
+* R (advanced): i.a. dplyr, tidyr, ggplot2, shiny, forecast, caret, purrr, data.table
+* Python (intermediate): i.a. pandas, numpy, TensorFlow, Keras, PySpark
+
+## Applications
+
+* RStudio, Jupyter Notebook, Git Bash, SQL Developer, SAS EG
+
+# Experience
+
+```{r}
+# Define information on Finance Analytics
+ING_finance <- c("Data Scientist", "ING Bank N.V. - Finance Analytics", "2016 - present", "Amsterdam")
+# Define information on ING Arrears department
+ING_arrears <- c("Data Scientist", "ING Bank N.V. - Arrears Department", "2014 - 2015", "Amsterdam")
+# Define information on ING Arrears department internship
+ING_arrears_intern <- c("Graduate Intern", "ING Bank N.V. - Arrears Department", "2013 - 2014", "Amsterdam")
+# Combine all information
+tribble(
+  ~ role, ~ company, ~ dates, ~ loc, ~ details,
+  # ING finance
+  ING_finance[1], ING_finance[2], ING_finance[3], ING_finance[4],
+    "Involved in setting up the Finance Analytics Center-of-Expertise, to exploit data for improved financial decisions",
+  ING_finance[1], ING_finance[2], ING_finance[3], ING_finance[4],
+    "Part of a small team of data scientists (2-3 FTE), working as internal consultants on projects within the (global) ING Finance domain",
+  ING_finance[1], ING_finance[2], ING_finance[3], ING_finance[4],
+    "Development of a pipeline of R packages for data cleaning, time series forecasting and interactive dashboarding for end-users",
+  ING_finance[1], ING_finance[2], ING_finance[3], ING_finance[4],
+    "Support the ING Finance Academy to provide training to Finance colleagues in Amsterdam, Brussels, Frankfurt and New York",
+  # ING arrears
+  ING_arrears[1], ING_arrears[2], ING_arrears[3], ING_arrears[4],
+    "Development and incremental improvement of several customer classificaton models, using machine learning methods in R",
+  ING_arrears[1], ING_arrears[2], ING_arrears[3], ING_arrears[4],
+    "Performing data analysis for the testing of new propositions for customers in arrears, using A-B testing in pilots",
+  ING_arrears[1], ING_arrears[2], ING_arrears[3], ING_arrears[4],
+    "Creating new interactive tools for the call employees to increase insight into the financial situation of individual customers",
+  # ING arrears intern
+  ING_arrears_intern[1], ING_arrears_intern[2], ING_arrears_intern[3], ING_arrears_intern[4],
+    "Research for my MSc Thesis on the application of Continuous Risk Management to reduce risk costs"
+  ) %>% 
+  detailed_entries(role, loc, company, dates, details)
+```
+
+# Education
+
+```{r}
+# Define information on data science accelerator program
+DSAP_info <- c("Data Science Accelerator Program", "Go Data Driven", "2016 - 2017", "")
+# Define information on Master
+MSc_info <- c("MSc (Cum Laude), Transport, Infrastructure & Logistics", "Delft University of Technology", "2011 - 2014", "GPA: 8.5")
+# Define information on exchange
+exch_info <- c("Erasmus Exchange in Transport Science", "KTH Royal Institute of Technology in Stockholm", "2011 - 2012", "GPA: 9.3")
+# Define information on Bachelor
+BSc_info <- c("BSc (Cum Laude), Technical Policy Management", "Delft University of Technology", "2008 - 2011", "GPA: 8.7")
+# Combine all information
+tribble(
+    ~ degree, ~ uni, ~ dates, ~ gpa, ~ details,
+    # DSAP
+    DSAP_info[1], DSAP_info[2], DSAP_info[3], DSAP_info[4], 
+      "Combines in-depth and hands-on lectures with practical workshops to improve data science skills and knowledge",
+    DSAP_info[1], DSAP_info[2], DSAP_info[3], DSAP_info[4], 
+      "Capstone project: detect potential iPhone fraud on Marktplaats using scraped web data and images",
+    # MSc
+    MSc_info[1], MSc_info[2], MSc_info[3], MSc_info[4], 
+      "Specialization: Engineering - Transport, Logistics & Supply Chains",
+    MSc_info[1], MSc_info[2], MSc_info[3], MSc_info[4], 
+      "Thesis: Continuous Risk Management of Customers, Application at the ING Arrears Department",
+    MSc_info[1], MSc_info[2], MSc_info[3], MSc_info[4], 
+      "Honours Programme: Swedish Transport & Logistics Systems",
+    # Exchange
+    exch_info[1], exch_info[2], exch_info[3], exch_info[4], 
+      "Five courses during the first semester (37.5 ECTS) as part of my MSc Honours Programme",
+    # BSc
+    BSc_info[1], BSc_info[2], BSc_info[3], BSc_info[4], 
+      "Domain: TIL - Transport, Infrastructure & Logistics",
+    BSc_info[1], BSc_info[2], BSc_info[3], BSc_info[4], 
+      "Minor: Entrepreneurship for Smart Living 2020 (Awarded best project)"
+  ) %>% 
+  detailed_entries(degree, gpa, uni, dates, details)
+```
