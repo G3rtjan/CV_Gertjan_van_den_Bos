@@ -22,12 +22,12 @@ library(tibble)
 
 ## Data Science
 
-* Time Series, Forecasting, Anomaly Detection, Classification, Machine Learning, Data Wrangling, Data Visualization, Dashboarding, Process Automation
+* Time Series, Forecasting, Anomaly Detection, Classification, Regression, Graph Analysis, Data Wrangling, Data Visualization, Dashboarding, Process Automation
 
 ## Languages
 
 * R (advanced): i.a. dplyr, tidyr, ggplot2, shiny, forecast, caret, purrr, data.table
-* Python (intermediate): i.a. pandas, numpy, TensorFlow, Keras, PySpark
+* Python (intermediate): i.a. pandas, numpy, sklearn, dash, TensorFlow, Keras, PySpark
 
 ## Applications
 
@@ -36,8 +36,10 @@ library(tibble)
 # Experience
 
 ```{r}
+# Define information on Financial Crime & RegTech Analytics
+ING_fin_crime_and_regtech <- c("Data Scientist", "ING Bank N.V. - Financial Crime & RegTech Analytics", "2019 - present", "Amsterdam")
 # Define information on Finance Analytics
-ING_finance <- c("Data Scientist", "ING Bank N.V. - Finance Analytics", "2016 - present", "Amsterdam")
+ING_finance <- c("Data Scientist", "ING Bank N.V. - Finance Analytics", "2016 - 2019", "Amsterdam")
 # Define information on ING Arrears department
 ING_arrears <- c("Data Scientist", "ING Bank N.V. - Arrears Department", "2014 - 2015", "Amsterdam")
 # Define information on ING Arrears department internship
@@ -45,6 +47,9 @@ ING_arrears_intern <- c("Graduate Intern", "ING Bank N.V. - Arrears Department",
 # Combine all information
 tribble(
   ~ role, ~ company, ~ dates, ~ loc, ~ details,
+    # ING financial crime & regtech
+  ING_fin_crime_and_regtech[1], ING_fin_crime_and_regtech[2], ING_fin_crime_and_regtech[3], ING_fin_crime_and_regtech[4],
+    "Part of a medium sized team of data scientists (15 FTE), working on projects within the (global) ING Financial Crime & Regtech domain",
   # ING finance
   ING_finance[1], ING_finance[2], ING_finance[3], ING_finance[4],
     "Involved in setting up the Finance Analytics Center-of-Expertise, to exploit data for improved financial decisions",
